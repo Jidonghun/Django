@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>목록</title>
+</head>
+<body>
+    <h1>메뉴</h1>
+    {% for burger in burgers %}           <!-- %: 명령 -->
+        <div>{{burger.name}} (가격: {{burger.price}})</div>
+    {% endfor %}
+</body>
+</html>
+
+<!--    <ol>                    &lt;!&ndash; 순서 있는 내용 &ndash;&gt;-->
+<!--        <li>새우버거</li>-->
+<!--        <li>치즈버거</li>-->
+<!--    </ol>-->
+<!--    <ul>                    &lt;!&ndash; 순서 없는 내용 &ndash;&gt;-->
+<!--        <li>새우버거</li>-->
+<!--        <li>치즈버거</li>-->
+<!--    </ul>-->

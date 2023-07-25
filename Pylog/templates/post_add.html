@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="navbar">
+        <span>pylog</span>
+        <a href="/posts/add/" class="btn btn_primary">글 작성</a>
+    </div>
+    <div id="post_add">
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                <label>제목</label>
+                <input name="title" type="text">
+            </div>
+            <div>
+                <label>내용</label>
+                <textarea name="content" cols="50" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn_primary">작성</button>
+        </form>
+    </div>
+</body>
+</html>
